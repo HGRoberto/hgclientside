@@ -22,6 +22,3 @@ var gulp = require('gulp'),
                  .pipe(uglify())
                  .pipe(gulp.dest('dist/'));
     });
-
-
-//update
