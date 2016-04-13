@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 
     gulp.task('build-js', function() {
       return gulp.src(scriptPaths)
-                 .pipe(concat('bundle.js'))
+                 .pipe(concat('bundle.min.js'))
                  .pipe(uglify())
                  .pipe(gulp.dest('dist/'));
     });
