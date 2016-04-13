@@ -1,0 +1,1 @@
+angular.module("hgClientModule",[]),function(){"use strict";function e(){function e(e,t){var l=["$apply","$digest"],n=e.$root.$$phase;-1!=l.indexOf(n)?e.$eval(t):e.$apply(t)}return{executeWith$Apply:e}}angular.module("hgClientModule").factory("ApplyFactory",e),e.$inject=[]}();
