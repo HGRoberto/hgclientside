@@ -16,6 +16,10 @@ var gulp = require('gulp'),
             .pipe(jshint.reporter('jshint-stylish'));
     });
 
+    gulp.task('watchToBundle', function() {
+      gulp.watch(scriptPaths, ['build-js']);
+    });
+
     gulp.task('build-js', function() {
       return gulp.src(scriptPaths)
                  .pipe(concat('bundle.min.js'))
