@@ -5,9 +5,9 @@
   .module('hgClientModule')
   .directive('hgDirectiveCallApplyFactory', hgDirectiveCallApplyFactory);
 
-  hgDirectiveCallApplyFactory.$inject = ['ApplyFactory'];
+  hgDirectiveCallApplyFactory.$inject = ['SafeApplyFactory'];
 
-  function hgDirectiveCallApplyFactory(ApplyFactory) {
+  function hgDirectiveCallApplyFactory(SafeApplyFactory) {
     return {
       restrict : 'EA',
       scope: { value: '=' },
@@ -17,7 +17,7 @@
 
     function link(scope, element, attr) {
         setTimeout(function() {
-            ApplyFactory.executeWith$Apply(function() {
+            SafeApplyFactory.executeWith$Apply(function() {
               scope.value = 'changed';
             });
         });

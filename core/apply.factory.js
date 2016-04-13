@@ -3,7 +3,7 @@
 
   angular
   .module('hgClientModule')
-  .factory('ApplyFactory', ApplyFactory);
+  .factory('SafeApplyFactory', ApplyFactory);
 
   ApplyFactory.$inject = [];
 
